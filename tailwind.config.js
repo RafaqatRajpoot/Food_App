@@ -11,6 +11,12 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'custom-image': 'url("/contact-bg.png")',
+      },
+      colors: {
+        'custom-orange': '#EA6D27',
+        'custom-light-orange': '#E97F47',
+        'custom-yellow': '#FFBB00',
       },
     },
   },

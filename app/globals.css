@@ -2,26 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@keyframes flip-up {
+    0% {
+        transform: perspective(400px) rotateY(45deg) scale(0.7);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: perspective(400px) rotateY(0deg) scale(1);
+        opacity: 1;
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.animate-flip-up {
+    animation: flip-up 2s ease-in-out infinite;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.delay-flip-up-2 {
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timeline: 10s;
+}
+
+.delay-flip-up-4 {
+    animation-delay: 4s, 12s;
+    animation-iteration-count: infinite
+}
+
+.delay-flip-up-6 {
+    animation-delay: 6s, 14s;
+    animation-iteration-count: infinite
+}
+
+.delay-flip-up-8 {
+    animation-delay: 8s, 16s;
+    animation-iteration-count: infinite
 }
